@@ -22,3 +22,5 @@ def ch():
 
 
 
+if __name__ == "__main__":
+   ch()
