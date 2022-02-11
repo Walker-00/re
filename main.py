@@ -15,12 +15,11 @@ def ch():
     if h == m[1]:
         s = st.text_input("Singer:")
         ss = st.text_input("song: ")
-        ro = r.get("https://api.lyrics.ovh/v1/" + s + "/" + ss)
-        o = json.load(ro.text)
-        st.text(o)
-
-
-
+        if st.button("Next", key="next"):
+            ro = r.get("https://api.lyrics.ovh/v1/" + s + "/" + ss)
+            o = json.load(ro.text)
+            st.text(o)
 
 if __name__ == "__main__":
-   ch()
+    ch()
+
